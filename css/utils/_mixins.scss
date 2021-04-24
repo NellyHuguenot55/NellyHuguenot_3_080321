@@ -1,0 +1,34 @@
+//container des différentes sections (header, footer inclus) du site
+@mixin section-container($top:50px, $right:20px, $bottom:50px, $left:20px) {
+	padding: $top $right $bottom $left;
+}
+
+//Transition
+@mixin transition($name, $duration:0.5s, $timing-function:ease-in-out, $delay:0s){
+	transition: $name $duration $timing-function $delay;
+}
+
+//Animation
+@mixin animation($name, $duration, $timing-function:ease-in-out, $delay:0s, $fill-mode:none){
+	animation:$name $duration $timing-function $delay $fill-mode;
+}
+
+//Mediaqueries
+@mixin responsive($width) {
+	@if $width == wide-screen {
+		@media only screen and (max-width: $width-large) {
+			@content;
+		}
+	}
+	@else if $width == medium-screen {
+		@media only screen and (max-width: $width-medium) {
+			@content;
+		}
+	}
+	@else if $width == small-screen {
+		@media only screen and (max-width: $width-small) {
+			@content;
+		}
+	}
+}
+

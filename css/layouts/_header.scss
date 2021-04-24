@@ -1,0 +1,21 @@
+.header {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    box-shadow: $net-shadow;
+    background-color: white;
+    vertical-align: middle;
+    @include section-container(20px, $bottom:20px); 
+
+    &__container {
+        position: relative;
+        @extend .max-container;
+    }
+    
+    &__icon {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

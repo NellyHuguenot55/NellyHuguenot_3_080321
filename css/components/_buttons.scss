@@ -1,0 +1,93 @@
+//bouton qui appelle à l'action: rechercher un resto, commander...
+
+.button-active {
+    position: relative;
+    padding: 20px;
+    background: linear-gradient($secondary-color, $primary-color);
+    border-radius: $border-radius-l;
+    box-shadow: $dark-shadow;
+    @include transition(box-shadow, 0.5s);
+    
+    &:hover {
+        box-shadow: $very-dark-shadow;
+        &::after {
+            opacity:1;
+        }
+    }
+    &::after {
+        content:"";
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: $border-radius-l;
+        background: rgba(255, 255, 255, 0.25);
+        @include transition(opacity);
+    }
+
+    &__text {
+        color: white;
+    }
+}
+
+.container-button {
+    text-align: center;
+}
+
+.button-active--larger {
+    padding: 20px 50px;
+}
+
+//bouton avec étapes
+
+.button-step {
+    flex-grow: 1;
+    display: flex;
+    position: relative;
+    padding: 30px;
+    background-color: $grey;
+    border-radius: $border-radius-m;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: $step__round-size /2;
+    box-shadow: $blur-shadow;
+    transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+
+    &__round {
+        position: absolute;
+        text-align: center;
+        width: $step__round-size;
+        height: $step__round-size;
+        border-radius: $border-radius-xl;
+        background-color: $primary-color;
+        color: white;
+        line-height: $step__round-size;
+        left: -$step__round-size /2;
+        top: calc(50% - #{$step__round-size} /2 );
+    }
+
+    &__text {
+        display: inline-block;
+        font-weight: $font-weight-bold;
+        line-height: 20px;
+        vertical-align: middle;
+    }
+    
+    &__icon {
+        color: darken($grey,50%);
+        align-self: center;
+        @include transition(color);
+        margin-right: 20px;
+    }
+    
+    &:hover {
+        background-color: lighten($primary-color, 35%);
+        box-shadow: $dark-shadow;
+
+        .button-step__icon {
+            color: $primary-color;
+        }
+    }
+}

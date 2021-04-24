@@ -1,0 +1,26 @@
+.footer {
+    background-color: darken($grey, 75%);
+    @include section-container(30px, $bottom:30px);
+    color: white;
+
+    &__container {
+        @extend .max-container;
+    } 
+
+    &__list {
+        display: flex;
+        margin-bottom: 10px;
+    }
+    
+    &__icon {
+        margin-right: 10px;
+    }
+    
+    &__icon--size {
+        font-size: 10px;
+    }
+    
+    &__contact {
+        color:white;
+    }
+}

@@ -1,0 +1,12 @@
+//conteneur taille max du site
+.max-container {
+    max-width: 1400px;
+    margin: auto;
+   }
+
+//comportement des images dans leur conteneur
+.img-size {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

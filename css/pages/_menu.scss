@@ -1,0 +1,49 @@
+.figure {
+    height: 450px;
+
+    &__img {
+        @extend .img-size;
+    }
+}
+
+.menu {
+    position: relative;
+    z-index: 1;
+    margin-top: -40px;
+    background-color: $grey;
+    border-radius: 40px 40px 0 0;
+    @include section-container(35px, $bottom:85px);
+
+    &__max-container {
+        @extend .max-container;
+    }
+    
+    &__title-container {
+        display: flex;
+        padding-right: 20px;
+    }
+    
+    &__hilighted {
+        width: 45px;
+        border-bottom: solid 3px $tertiary-color;
+        margin-bottom: 15px;
+    }
+    
+    &__main-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -20px;
+        margin-bottom: 20px;
+    }
+    
+    &__dish-container {
+        flex: 1;
+        min-width: 320px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+
+        @include responsive(small-screen) { 
+            min-width: 270px;
+        }    
+    }
+}

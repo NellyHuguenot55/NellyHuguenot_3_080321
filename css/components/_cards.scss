@@ -1,0 +1,127 @@
+/*restaurant card*/
+
+.card-restaurant {
+    flex-grow: 1;
+    flex-basis: 0;
+    background-color: white;
+    border-radius: $border-radius-m;
+    overflow: hidden;
+    min-width: 45%;
+    height: 250px;
+    margin: 0 20px 20px 0;
+    box-shadow: $blur-shadow; 
+    cursor: pointer;
+    @include transition(box-shadow);
+    @media screen and (max-width: 550px) {
+        min-width: 230px;  
+    }
+
+    &__figure {
+        height: 66%; 
+        position: relative;
+    }
+    
+    &__img {
+        @extend .img-size;
+    }
+    
+    &__new {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: $tertiary-color;
+        color: darken($tertiary-color, 45%);
+        text-align: center;
+        padding: 10px 15px;
+        border-radius: $border-radius-xs;
+    }
+    
+    &__body {
+        display: flex;
+        flex: 1;
+        padding: 20px;  
+    }
+
+    &:hover {
+        box-shadow: $very-dark-shadow;
+    }
+}
+
+/*dish card*/
+
+.card-dish {
+    display: flex;
+    flex: 1;
+    min-width: 220px;
+    padding: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    background: white;
+    box-shadow: $blur-shadow;
+    border-radius: $border-radius-m;
+    margin-bottom: 15px;
+    opacity: 0; //permet d'apparaitre lors de l'animation
+    @include transition(box-shadow);
+    @include animation(gradual-onset, 1s, $fill-mode:forwards);
+
+    &__text {
+        overflow: hidden; //permet à la card de conserver sa taille et à ellipsis de s'appliquer
+    }
+      
+    &__text > * {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+      
+    &__price {
+      font-weight: $font-weight-bold;
+      margin-left: auto;
+      align-self: flex-end;
+    }
+      
+    &__check {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      margin: -20px -120px -20px 20px ;
+      background: $tertiary-color;
+      @include transition(margin-right);
+    }
+      
+    .fa-check-circle {
+      font-size: 30px;
+      color: white;
+      transform: rotate(0);
+      @include transition(transform);
+    }
+
+    &:nth-child(3) {
+        animation-delay: 0.5s;
+    }
+    
+    &:nth-child(4) {
+        animation-delay: 1s;
+    }
+    
+    &:nth-child(5) {
+        animation-delay: 1.5s;
+    }
+
+    &:nth-child(6) {
+        animation-delay: 2s;
+    }
+
+    &:hover  {
+        box-shadow: $very-dark-shadow;
+
+        .card-dish__check {
+             margin-right: -20px;
+         }
+     
+         .fa-check-circle {
+             transform: rotate(1turn);
+         }
+     }   
+}

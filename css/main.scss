@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+//1. configuration et utilitaires
+@import 
+    './utils/variables',
+    './utils/mixins',
+    './utils/extend',
+    './utils/keyframes';
+
+//2. Vendors
+@import 
+    './vendors/normalize';
+
+//3. Base
+@import 
+    './base/base',
+    './base/typography';
+
+//4. Layout-related sections
+@import 
+    './layouts/header',
+    './layouts/footer';
+
+//5. Components
+@import
+    './components/loader',
+    './components/logo',
+    './components/heart',
+    './components/buttons',
+    './components/cards';
+
+//6. Page-specific styles
+@import
+    './pages/home',
+    './pages/menu';
+
+//7. Themes

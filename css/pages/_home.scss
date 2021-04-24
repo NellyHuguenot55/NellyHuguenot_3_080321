@@ -1,0 +1,63 @@
+//Section localisation
+
+.localisation {
+    background-color: darken($grey, 5%);
+    text-align: center;
+    @include section-container(20px, $bottom:20px);
+
+    input {
+        background-color: darken($grey, 5%);
+        border: none;
+        font-weight: $font-weight-bold;
+        margin-left: 10px;
+        width: 115px; //width temporaire, pour la présentation de la maquette
+        &::placeholder {
+            color: black;
+        }
+    }
+}
+
+//Présentation du concept
+
+.presentation {
+    background-color: $grey;
+    text-align: center;
+    @include section-container;
+
+    &__text {
+        font-weight: $font-weight-light;
+        margin-bottom: 30px;
+    }
+}
+
+//section fonctionnement du site
+
+.function {
+    @extend .max-container;
+    @include section-container;
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -20px;
+    }
+}
+
+//section présentation des restaurants
+
+.restaurant {
+    background-color: $grey;
+    @include section-container;
+
+    &__container {
+        @extend .max-container;
+    } 
+
+    &__presentation {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-right: -20px;
+    }
+}
+

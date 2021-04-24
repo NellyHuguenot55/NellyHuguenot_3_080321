@@ -1,0 +1,43 @@
+// original name of colors 
+$medium-purple:#9356DC;
+$blush-pink: #FF79DA;
+$morning-glory: #99E2D0;
+
+//colors
+$primary-color: $medium-purple;
+$secondary-color: $blush-pink;
+$tertiary-color: $morning-glory;
+
+//grey
+$grey: rgb(246,246,246);
+$grey-icon: rgb(126,126,126);
+
+//typography
+$font-family-sans-serif: 'Roboto', Helvetica, Arial, sans-serif;
+$font-family-serif: 'Shrikhand', Georgia, serif;
+
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 800;
+
+//shadow
+$net-shadow: 0 2px 5px rgb(170, 170, 170);
+$blur-shadow: 0 10px 10px rgb(230, 230, 230);
+$dark-shadow: 0 5px 15px rgb(170, 170, 170);
+$very-dark-shadow: 0 5px 15px rgb(120, 120, 120);
+
+//border-radius
+$border-radius-xs: 5px;
+$border-radius-s: 10px;
+$border-radius-m: 20px;
+$border-radius-l: 30px;
+$border-radius-xl: 100%;
+
+//breakpoint
+$width-small: 400px;
+$width-medium: 760px;
+$width-large: 1200px;
+
+//step round size
+$step__round-size: 25px;
