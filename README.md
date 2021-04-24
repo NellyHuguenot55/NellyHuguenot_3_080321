@@ -1,7 +1,5 @@
 # NellyHuguenot_3_080321 - Ohmyfood
 
-# lien vers votre repository GitHub : https://nellyhuguenot55.github.io/NellyHuguenot_3_080321/
-# lien vers la page web du site : https://nellyhuguenot55.github.io/NellyHuguenot_3_080321/index.html
 
 ### Projet 3 du parcours "Développeur web" d'OpenClassrooms - Dynamisez une page web avec des animations CSS
 
